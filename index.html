@@ -1,67 +1,79 @@
-<html>
-    <head>
-      <title>Sign-Up/Login</title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-	<a href="https://front.codes/" class="logo" target="_blank">
-		<img src="https://assets.codepen.io/1462889/fcy.png" alt="">
-	</a>
+<div id="back">
+  <canvas id="canvas" class="canvas-back"></canvas>
+  <div class="backRight">    
+  </div>
+  <div class="backLeft">
+  </div>
+</div>
 
-	<div class="section">
-		<div class="container">
-			<div class="row full-height justify-content-center">
-				<div class="col-12 text-center align-self-center py-5">
-					<div class="section pb-5 pt-5 pt-sm-2 text-center">
-						<h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
-			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-			          	<label for="reg-log"></label>
-						<div class="card-3d-wrap mx-auto">
-							<div class="card-3d-wrapper">
-								<div class="card-front">
-									<div class="center-wrap">
-										<div class="section text-center">
-											<h4 class="mb-4 pb-3">Log In</h4>
-											<div class="form-group">
-												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-												<i class="input-icon uil uil-at"></i>
-											</div>	
-											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-												<i class="input-icon uil uil-lock-alt"></i>
-											</div>
-											<a href="#" class="btn mt-4">submit</a>
-                            				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
-				      					</div>
-			      					</div>
-			      				</div>
-								<div class="card-back">
-									<div class="center-wrap">
-										<div class="section text-center">
-											<h4 class="mb-4 pb-3">Sign Up</h4>
-											<div class="form-group">
-												<input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
-												<i class="input-icon uil uil-user"></i>
-											</div>	
-											<div class="form-group mt-2">
-												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-												<i class="input-icon uil uil-at"></i>
-											</div>	
-											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-												<i class="input-icon uil uil-lock-alt"></i>
-											</div>
-											<a href="#" class="btn mt-4">submit</a>
-				      					</div>
-			      					</div>
-			      				</div>
-			      			</div>
-			      		</div>
-			      	</div>
-		      	</div>
-	      	</div>
-	    </div>
-	</div>
-	<script  src="./script.js"></script>
-</body>
-</html>
+<div id="slideBox">
+  <div class="topLayer">
+    <div class="left">
+      <div class="content">
+        <h2>Sign Up</h2>
+        <form id="form-signup" method="post" onsubmit="return false;">
+          <div class="form-element form-stack">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" type="email" name="email">
+          </div>
+          <div class="form-element form-stack">
+            <label for="username-signup" class="form-label">Username</label>
+            <input id="username-signup" type="text" name="username">
+          </div>
+          <div class="form-element form-stack">
+            <label for="password-signup" class="form-label">Password</label>
+            <input id="password-signup" type="password" name="password">
+          </div>
+          <div class="form-element form-checkbox">
+            <input id="confirm-terms" type="checkbox" name="confirm" value="yes" class="checkbox">
+            <label for="confirm-terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+          </div>
+          <div class="form-element form-submit">
+            <button id="signUp" class="signup" type="submit" name="signup">Sign up</button>
+            <button id="goLeft" class="signup off">Log In</button> 
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="right">
+      <div class="content">
+        <h2>Login</h2>
+        <form id="form-login" method="post" onsubmit="return false;">
+          <div class="form-element form-stack">
+            <label for="username-login" class="form-label">Username</label>
+            <input id="username-login" type="text" name="username">
+          </div>
+          <div class="form-element form-stack">
+            <label for="password-login" class="form-label">Password</label>
+            <input id="password-login" type="password" name="password">
+          </div>
+          <div class="form-element form-submit">
+            <button id="logIn" class="login" type="submit" name="login">Log In</button>
+            <button id="goRight" class="login off" name="signup">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+
+Remixed from "Sliding Login Form" Codepen by
+C-Rodg (github.com/C-Rodg)
+https://codepen.io/crodg/pen/yNKxej
+
+Remixed from "Paper.js - Animated Shapes Header" Codepen by
+Connor Hubeny (@cooper_hu)
+https://codepen.io/cooper_hu/pen/ybxoev
+
+Custom Checkbox based on the blog post by
+Mik Ted (@inserthtml):
+https://www.inserthtml.com/2012/06/custom-form-radio-checkbox/
+
+HTML5 Form Validation based on the blog post by
+Thoriq Firdaus (@tfirdaus):
+https://webdesign.tutsplus.com/tutorials/
+html5-form-validation-with-the-pattern-attribute--cms-25145
+
+-->
